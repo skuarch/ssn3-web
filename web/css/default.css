@@ -1,0 +1,20 @@
+/* 
+    Document   : default
+    Created on : Oct 26, 2011, 9:30:22 AM
+    Author     : skuarch
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    padding-top: 60px;
+}
+
+.textRed{
+    color:#f89406;
+}
+
+.right{
+    text-align: right;
+}
+
