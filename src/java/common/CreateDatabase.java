@@ -67,9 +67,7 @@ public class CreateDatabase {
             cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'IP Talkers Sources Bytes', '3', '3');");
             cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Hostname Talkers Bytes', '3', '4');");
             cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Hostname Talkers Destination Bytes', '3', '5');");
-            cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Hostname Talkers Sources Bytes', '3', '6');");
-            cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Public IP Talkers Bytes', '3', '7');");
-            cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Private IP Talkers Bytes', '3', '8');");
+            cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Hostname Talkers Sources Bytes', '3', '6');");            
             cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Host Conversations Bytes', '4', '1');");
             cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Host TCP Conversations Bytes', '4', '2');");
             cdw2.update("INSERT INTO subcategories (subcategorie_active, subcategorie_name, subcategorie_categorie_id, subcategorie_order) VALUES ('1', 'Host UDP Conversations Bytes', '4', '3');");
