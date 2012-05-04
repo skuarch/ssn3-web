@@ -4,9 +4,17 @@
         <servlet-name>install</servlet-name>
         <servlet-class>common.install</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ThresholdTransport</servlet-name>
+        <servlet-class>ThresholdTransport</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>install</servlet-name>
         <url-pattern>/install</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ThresholdTransport</servlet-name>
+        <url-pattern>/ThresholdTransport</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
