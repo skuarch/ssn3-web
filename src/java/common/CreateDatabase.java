@@ -79,12 +79,12 @@ public class CreateDatabase {
             
             //table collectors
             cdw2.update("CREATE TABLE collectors (collector_id bigint(20) NOT NULL AUTO_INCREMENT, collector_type int(1) DEFAULT NULL COMMENT '1 openblocks 2 server', collector_host varchar(50) DEFAULT NULL, collector_ip varchar(15)DEFAULT NULL, collector_site varchar(100) DEFAULT NULL, collector_description varchar(150) DEFAULT NULL, collector_port int(5) DEFAULT NULL, collector_port_connection_server int(5) DEFAULT NULL,   collector_is_active int(1) DEFAULT NULL COMMENT '1 active 0 no active', collector_context varchar(25) DEFAULT NULL COMMENT 'part of url', collector_date_register timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'date of register', PRIMARY KEY (collector_id)) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;");
+            
             //table configuration            
-            cdw2.update("CREATE TABLE configuration (id_configuration bigint(20) NOT NULL AUTO_INCREMENT, help_path varchar(255) DEFAULT NULL, jws_path varchar(255) DEFAULT NULL, jms_time_wait_connectivity int(11) DEFAULT NULL, jms_time_wait_message int(11) DEFAULT NULL, project_name varchar(255) DEFAULT NULL, seconds_live varchar(20) DEFAULT NULL, PRIMARY KEY (id_configuration)) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1");
-
+            cdw2.update("CREATE TABLE configuration (id_configuration bigint(20) NOT NULL AUTO_INCREMENT, help_path varchar(255) DEFAULT NULL, jws_path varchar(255) DEFAULT NULL, jms_time_wait_connectivity int(11) DEFAULT NULL, jms_time_wait_message int(11) DEFAULT NULL, project_name varchar(255) DEFAULT NULL, seconds_live varchar(20) DEFAULT NULL, used_master_shaper varchar(3) DEFAULT NULL, master_shaper_server varchar(20) DEFAULT NULL,PRIMARY KEY (id_configuration)) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1");
             //data for table configuration
             cdw2.update("truncate table configuration");
-            cdw2.update("INSERT INTO configuration (jws_path, help_path, project_name, jms_time_wait_message, jms_time_wait_connectivity,seconds_live) VALUES ('http://" + serverDataBase + ":" + glassfishWebPort + "/" + projectName.split("_")[1] + "/ssn-app-client','http://" + serverDataBase + ":" + glassfishWebPort + "/ssn-war/help.jsp', '"+projectName.split("_")[1]+"', '10000', '10000','20');");
+            cdw2.update("INSERT INTO configuration (jws_path, help_path, project_name, jms_time_wait_message, jms_time_wait_connectivity,seconds_live, used_master_shaper) VALUES ('http://" + serverDataBase + ":" + glassfishWebPort + "/" + projectName.split("_")[1] + "/ssn-app-client','http://" + serverDataBase + ":" + glassfishWebPort + "/ssn-war/help.jsp', '"+projectName.split("_")[1]+"', '10000', '10000','20', 'no');");
 
             //table users
             cdw2.update("CREATE TABLE users (user_id bigint(20) NOT NULL AUTO_INCREMENT,user_name varchar(50) DEFAULT NULL,user_password varchar(50) DEFAULT NULL,user_level int(1) DEFAULT NULL COMMENT '1 =admin 2 = guest',  user_description varchar(100) DEFAULT NULL, PRIMARY KEY (user_id)) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;");
